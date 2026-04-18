@@ -4,31 +4,31 @@ import { Button } from "@/components/ui/button";
 import PageHero from "@/components/layout/PageHero";
 
 const benefits = [
-  { icon: Footprints, title: "Reduce Carbon Footprint", desc: "Ship leaner apps that consume less energy at every layer of the stack." },
-  { icon: Lightbulb, title: "Promote Eco Awareness", desc: "Educate users with thoughtful, beautiful experiences that change behavior." },
-  { icon: Gauge, title: "Smart Resource Usage", desc: "Optimize compute, bandwidth, and storage by default — no extra config." },
-  { icon: Battery, title: "Longer Device Lifespans", desc: "Efficient code keeps older hardware viable, slashing e-waste over time." },
-  { icon: Users, title: "Community-Powered", desc: "Open data and shared tools amplify impact across thousands of teams." },
-  { icon: ShieldCheck, title: "Verifiable Impact", desc: "Track and prove your environmental wins with transparent metrics." },
+  { icon: Footprints, title: "Help Nature Heal", desc: "Every idea on the site addresses a real environmental issue — from waste to water to wildlife." },
+  { icon: Lightbulb, title: "Inspire Young Builders", desc: "Give CS and IT students a meaningful first project that goes beyond the classroom." },
+  { icon: Gauge, title: "Open to Contribute", desc: "Pick an idea, add features, or remix it into your own — every skill level is welcome." },
+  { icon: Battery, title: "Real-World Skills", desc: "Practice React, APIs, design, and teamwork on projects that actually matter." },
+  { icon: Users, title: "Community of Makers", desc: "Connect with devs, designers, and learners who care about the planet as much as the code." },
+  { icon: ShoppingBag.prototype === undefined ? ShieldCheck : ShieldCheck, title: "Portfolio That Matters", desc: "Ship something meaningful — eco impact looks great in any application or interview." },
 ];
 
 const stats = [
-  { value: "−62%", label: "Avg. energy use vs. legacy stacks" },
-  { value: "1.2M", label: "kg CO₂ avoided to date" },
-  { value: "9k+", label: "Builders shipping greener" },
+  { value: "9+", label: "Open eco app ideas to pick from" },
+  { value: "All", label: "Skill levels welcome — beginner to advanced" },
+  { value: "1", label: "Happy Earth we're all building for" },
 ];
 
 const BenefitsPage = () => {
   return (
     <>
       <PageHero
-        eyebrow="The Impact"
+        eyebrow="Why Join Us"
         title={
           <>
-            Build software that <span className="text-primary">gives more</span> than it takes.
+            Build apps that <span className="text-primary">help the Earth</span> — and your future.
           </>
         }
-        description="Six concrete benefits your team — and the planet — will feel from day one."
+        description="Six real reasons developers, CS &amp; IT students, and curious learners are picking eco ideas from GreenCode."
       />
 
       {/* Stats strip */}
@@ -74,13 +74,13 @@ const BenefitsPage = () => {
       <section className="pb-24 md:pb-32">
         <div className="container">
           <div className="rounded-3xl border border-border/60 bg-gradient-soft p-10 md:p-14 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-balance">Ready to measure your impact?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-balance">Ready to build for the planet?</h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto">
-              Let's talk about how Green Code can fit into your team's roadmap.
+              Pick an idea, message us, or just say hi — we'd love to help you start your eco project.
             </p>
             <Button asChild size="lg" className="mt-8 rounded-full">
               <Link to="/contact">
-                Get in touch <ArrowRight className="h-4 w-4 ml-1" />
+                Join the community <ArrowRight className="h-4 w-4 ml-1" />
               </Link>
             </Button>
           </div>

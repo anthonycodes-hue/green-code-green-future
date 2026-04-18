@@ -39,7 +39,7 @@ const Ideas = () => {
                 <h3 className="text-lg font-semibold mb-2">{idea.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{idea.desc}</p>
                 <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-primary opacity-70 group-hover:opacity-100 group-hover:gap-2.5 transition-all duration-300">
-                  View details <ArrowRight className="h-4 w-4" />
+                  See the full project <ArrowRight className="h-4 w-4" />
                 </span>
               </Link>
             );

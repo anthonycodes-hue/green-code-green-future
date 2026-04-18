@@ -29,10 +29,10 @@ const ContactPage = () => {
         eyebrow="Say Hello"
         title={
           <>
-            Let's build something <span className="text-primary">good</span> together.
+            Want to <span className="text-primary">contribute</span>? Let's talk.
           </>
         }
-        description="Tell us about your project, your team, or just drop a kind word. We read every message."
+        description="Pitch an idea, ask to join a project, or just share what you're learning. Students, devs, and the eco-curious — you're all welcome here."
       />
 
       <section className="pb-24 md:pb-32">
@@ -51,7 +51,7 @@ const ContactPage = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-white">
                 <p className="font-display text-xl font-semibold leading-tight">
-                  "Small acts, multiplied by millions, can transform the world."
+                  "Never doubt that a small group of thoughtful students can change the world."
                 </p>
               </div>
             </div>
@@ -73,8 +73,8 @@ const ContactPage = () => {
                   <MapPin className="h-5 w-5 text-primary" />
                 </span>
                 <div>
-                  <div className="text-xs uppercase tracking-wider text-muted-foreground">Studio</div>
-                  <p className="font-medium">Remote-first, Earth 🌍</p>
+                  <div className="text-xs uppercase tracking-wider text-muted-foreground">Where</div>
+                  <p className="font-medium">Open & remote — anywhere on Earth 🌍</p>
                 </div>
               </div>
               <div className="flex items-start gap-4 rounded-2xl bg-card p-5 border border-border/60 shadow-soft">
@@ -120,12 +120,12 @@ const ContactPage = () => {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="subject">Subject</Label>
-                  <Input id="subject" name="subject" required placeholder="A new sustainable app idea" className="h-11" />
+                  <Label htmlFor="subject">I'd like to…</Label>
+                  <Input id="subject" name="subject" required placeholder="Contribute to an idea / share my own / just say hi" className="h-11" />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea id="message" name="message" required rows={6} placeholder="Tell us a bit about what you're working on…" />
+                  <Label htmlFor="message">Tell us a bit about you</Label>
+                  <Textarea id="message" name="message" required rows={6} placeholder="Are you a student, a developer, just curious? What eco topic excites you?" />
                 </div>
                 <Button type="submit" size="lg" className="w-full rounded-full" disabled={loading}>
                   {loading ? "Sending…" : (<>Send message <Send className="h-4 w-4 ml-1" /></>)}

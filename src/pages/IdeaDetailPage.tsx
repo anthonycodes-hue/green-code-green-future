@@ -12,7 +12,7 @@ const IdeaDetailPage = () => {
     return (
       <section className="pt-40 pb-32 container text-center">
         <h1 className="text-3xl font-bold mb-4">Idea not found</h1>
-        <p className="text-muted-foreground mb-8">We couldn't find that concept in our catalog.</p>
+        <p className="text-muted-foreground mb-8">We couldn't find that eco app idea — it may have moved.</p>
         <Button asChild>
           <Link to="/ideas">
             <ArrowLeft className="h-4 w-4 mr-2" /> Back to Ideas
@@ -46,7 +46,7 @@ const IdeaDetailPage = () => {
             to="/ideas"
             className="inline-flex items-center gap-2 text-sm font-medium text-white/80 hover:text-white transition-colors animate-fade-in"
           >
-            <ArrowLeft className="h-4 w-4" /> Back to all ideas
+            <ArrowLeft className="h-4 w-4" /> Back to all eco ideas
           </Link>
 
           <div className="mt-6 max-w-3xl">
@@ -96,7 +96,7 @@ const IdeaDetailPage = () => {
               <span className="h-9 w-9 rounded-xl bg-destructive/10 flex items-center justify-center">
                 <AlertCircle className="h-5 w-5 text-destructive" />
               </span>
-              <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">The Problem</h2>
+              <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">The Problem in Nature</h2>
             </div>
             <p className="text-xl leading-relaxed text-foreground/90">{idea.problem}</p>
           </article>
@@ -109,7 +109,7 @@ const IdeaDetailPage = () => {
               <span className="h-9 w-9 rounded-xl bg-primary/15 flex items-center justify-center">
                 <Lightbulb className="h-5 w-5 text-primary" />
               </span>
-              <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">Our Solution</h2>
+              <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">How This App Helps</h2>
             </div>
             <p className="text-xl leading-relaxed text-foreground/90">{idea.solution}</p>
           </article>
@@ -120,8 +120,8 @@ const IdeaDetailPage = () => {
       <section className="pb-24 md:pb-32">
         <div className="container">
           <div className="max-w-2xl mb-12">
-            <span className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">Capabilities</span>
-            <h2 className="mt-3 text-3xl md:text-4xl font-bold text-balance">Key features that make it work.</h2>
+            <span className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">What you'll build</span>
+            <h2 className="mt-3 text-3xl md:text-4xl font-bold text-balance">Key features to bring to life.</h2>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
