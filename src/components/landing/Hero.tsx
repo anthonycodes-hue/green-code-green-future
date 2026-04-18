@@ -68,7 +68,7 @@ const Hero = () => {
         <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[4.5rem] font-extrabold leading-[0.95] text-balance drop-shadow-2xl">
           Green Code,
           <br />
-          <span className="bg-gradient-to-r from-primary-glow via-accent to-primary-glow bg-clip-text text-green-500 [background-size:200%] animate-pulse-slow">
+          <span className="bg-gradient-to-r from-primary-glow via-accent to-primary-glow bg-clip-text text-green-500 [background-size:200%]">
             Green Future.
           </span>
         </h1>
