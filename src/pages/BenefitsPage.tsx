@@ -9,7 +9,7 @@ const benefits = [
   { icon: Gauge, title: "Open to Contribute", desc: "Pick an idea, add features, or remix it into your own — every skill level is welcome." },
   { icon: Battery, title: "Real-World Skills", desc: "Practice React, APIs, design, and teamwork on projects that actually matter." },
   { icon: Users, title: "Community of Makers", desc: "Connect with devs, designers, and learners who care about the planet as much as the code." },
-  { icon: ShoppingBag.prototype === undefined ? ShieldCheck : ShieldCheck, title: "Portfolio That Matters", desc: "Ship something meaningful — eco impact looks great in any application or interview." },
+  { icon: ShieldCheck, title: "Portfolio That Matters", desc: "Ship something meaningful — eco impact looks great in any application or interview." },
 ];
 
 const stats = [
