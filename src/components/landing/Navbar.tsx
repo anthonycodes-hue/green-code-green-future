@@ -81,7 +81,7 @@ const Navbar = () => {
                   : "bg-white text-primary hover:bg-white/90",
               )}
             >
-              <Link to="/contact">Get Started</Link>
+              <Link to="/contact">Join Us</Link>
             </Button>
 
             <button
@@ -118,7 +118,7 @@ const Navbar = () => {
               ))}
               <li className="pt-2">
                 <Button asChild className="w-full rounded-full">
-                  <Link to="/contact">Get Started</Link>
+                  <Link to="/contact">Join Us</Link>
                 </Button>
               </li>
             </ul>
