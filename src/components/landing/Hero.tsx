@@ -24,10 +24,10 @@ const Hero = () => {
         </div>
 
         <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[1.05] text-balance animate-fade-in-slow">
-          Eco Apps,
+          Green Code,
           <br />
           <span className="bg-gradient-to-r from-primary-glow to-accent bg-clip-text text-transparent">
-            Happy Earth.
+            Green Future.
           </span>
         </h1>
 
