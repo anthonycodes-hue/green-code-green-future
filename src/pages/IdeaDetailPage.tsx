@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, ArrowRight, AlertCircle, Lightbulb, CheckCircle2, Sparkles } from "lucide-react";
+import { ArrowLeft, ArrowRight, AlertCircle, Lightbulb, CheckCircle2, Sparkles, Leaf } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getIdea, ideas } from "@/data/ideas";
 import ideaHero from "@/assets/idea-hero.jpg";
@@ -137,6 +137,52 @@ const IdeaDetailPage = () => {
                 <h3 className="text-base font-semibold leading-snug">{feature}</h3>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Impact on the planet */}
+      <section className="pb-24 md:pb-32">
+        <div className="container">
+          <div className="relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-accent/40 via-card to-card p-8 md:p-14 shadow-soft">
+            {/* decorative blobs */}
+            <div className="pointer-events-none absolute -top-20 -right-16 h-64 w-64 rounded-full bg-primary/15 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-24 -left-16 h-72 w-72 rounded-full bg-primary-glow/15 blur-3xl" />
+
+            <div className="relative">
+              <div className="max-w-2xl mb-12">
+                <div className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                  <Leaf className="h-3.5 w-3.5" /> Impact on the planet
+                </div>
+                <h2 className="mt-4 text-3xl md:text-4xl font-bold text-balance">
+                  How <span className="text-primary">{idea.title}</span> helps the Earth.
+                </h2>
+                <p className="mt-3 text-muted-foreground md:text-lg">
+                  Real, tangible ways this app supports nature, wildlife, and the people who live alongside them.
+                </p>
+              </div>
+
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {idea.impact.map((item, i) => (
+                  <div
+                    key={item.label}
+                    className="group relative rounded-2xl border border-border/60 bg-card/80 backdrop-blur p-6 hover:shadow-card hover:-translate-y-1 hover:border-primary/30 transition-all duration-300 animate-fade-in"
+                    style={{ animationDelay: `${i * 100}ms`, animationFillMode: "backwards" }}
+                  >
+                    <div className="font-display text-4xl md:text-5xl font-extrabold leading-none bg-gradient-to-br from-primary to-primary-glow bg-clip-text text-transparent">
+                      {item.value}
+                    </div>
+                    <div className="mt-4 text-sm font-semibold uppercase tracking-wider text-foreground/80">
+                      {item.label}
+                    </div>
+                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                      {item.desc}
+                    </p>
+                    <div className="absolute inset-x-6 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
