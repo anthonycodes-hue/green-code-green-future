@@ -26,7 +26,7 @@ const About = () => {
           {/* Floating stat badge */}
           <div className="absolute -bottom-6 -right-6 glass p-6 rounded-3xl animate-float shadow-glow">
             <div className="text-3xl font-bold text-primary">100%</div>
-            <div className="text-[10px] uppercase tracking-wider font-bold text-muted-foreground">Eco Focus</div>
+            <div className="text-[10px] uppercase tracking-wider font-bold text-white">Eco Focus</div>
           </div>
         </div>
 

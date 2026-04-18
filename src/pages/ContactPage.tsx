@@ -74,7 +74,7 @@ const ContactPage = () => {
                 </span>
                 <div>
                   <div className="text-xs uppercase tracking-wider text-muted-foreground">Where</div>
-                  <p className="font-medium">Open & remote anywhere on Earth 🌍</p>
+                  <p className="font-medium">Open & remote anywhere on Earth </p>
                 </div>
               </div>
               <div className="flex items-start gap-4 rounded-2xl bg-card p-5 border border-border/60 shadow-soft">

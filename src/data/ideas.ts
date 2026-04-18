@@ -10,11 +10,31 @@ import {
   ShoppingBag,
   type LucideIcon,
 } from "lucide-react";
+import { 
+  IoTrendingDown, 
+  IoSync, 
+  IoGlobeOutline, 
+  IoLeafOutline, 
+  IoTrendingUp, 
+  IoBugOutline,
+  IoBulbOutline,
+  IoWaterOutline,
+  IoBicycleOutline,
+  IoFishOutline,
+  IoSparklesOutline,
+  IoBagHandleOutline,
+  IoStatsChartOutline,
+  IoShieldCheckmarkOutline
+} from "react-icons/io5";
+import { FaTree } from "react-icons/fa6";
+import { FiWind } from "react-icons/fi";
+import { IconType } from "react-icons";
 
 export type ImpactItem = {
   value: string;
   label: string;
   desc: string;
+  icon: IconType;
 };
 
 export type Idea = {
@@ -41,7 +61,7 @@ export const ideas: Idea[] = [
     problem:
       "Most people throw recyclables in the wrong bin, sending huge amounts of reusable material straight to landfills and polluting nature.",
     solution:
-      "A friendly mobile app that scans a product and instantly explains how to recycle it correctly in your town perfect first project for a student team.",
+      "A friendly mobile app that scans a product and instantly explains how to recycle it correctly in your town - perfect first project for a student team.",
     features: [
       "Barcode & image recognition",
       "Local recycling rules database",
@@ -49,17 +69,20 @@ export const ideas: Idea[] = [
     ],
     impact: [
       {
-        value: "↓ 40%",
+        value: "40%",
+        icon: IoTrendingDown,
         label: "Less landfill waste",
         desc: "Correct sorting keeps recyclables out of landfills, reducing methane and toxins leaching into soil.",
       },
       {
-        value: "♻️ 3×",
+        value: "3×",
+        icon: IoSync,
         label: "More materials reused",
         desc: "Clean recycling streams get processed instead of contaminated batches being burned or buried.",
       },
       {
-        value: "🌍",
+        value: "Global",
+        icon: IoGlobeOutline,
         label: "Cleaner neighborhoods",
         desc: "Less plastic and packaging escapes into rivers, parks, and oceans where wildlife lives.",
       },
@@ -76,7 +99,7 @@ export const ideas: Idea[] = [
     problem:
       "City life disconnects people from nature, and many would grow food at home if they only knew how to start.",
     solution:
-      "A planner app that turns any balcony or windowsill into a small green oasis a wonderful project to learn APIs, scheduling, and UX.",
+      "A planner app that turns any balcony or windowsill into a small green oasis - a wonderful project to learn APIs, scheduling, and UX.",
     features: [
       "Space-aware plant suggestions",
       "Smart watering schedule",
@@ -84,17 +107,20 @@ export const ideas: Idea[] = [
     ],
     impact: [
       {
-        value: "🌱",
+        value: "Urban",
+        icon: IoLeafOutline,
         label: "More urban green spaces",
         desc: "Every balcony garden adds oxygen, cools city air, and supports pollinators like bees and butterflies.",
       },
       {
-        value: "↓ CO₂",
+        value: "CO₂",
+        icon: IoTrendingDown,
         label: "Shorter food miles",
         desc: "Growing herbs and veggies at home cuts the carbon footprint of imported produce.",
       },
       {
-        value: "🐝",
+        value: "Safe",
+        icon: IoBugOutline,
         label: "Pollinator friendly",
         desc: "Small home gardens become tiny refuges for declining bee and insect populations.",
       },
@@ -109,9 +135,9 @@ export const ideas: Idea[] = [
     category: "Energy",
     desc: "Help families get the most out of clean solar energy.",
     problem:
-      "Many solar panel owners have no idea how much clean energy they produce or how to improve it so the planet misses out on greener power.",
+      "Many solar panel owners have no idea how much clean energy they produce or how to improve it - so the planet misses out on greener power.",
     solution:
-      "A dashboard that shows real-time solar production with friendly tips a fantastic IoT + data project for IT students.",
+      "A dashboard that shows real-time solar production with friendly tips - a fantastic IoT + data project for IT students.",
     features: [
       "Live production dashboard",
       "Weather-adjusted forecasts",
@@ -119,17 +145,20 @@ export const ideas: Idea[] = [
     ],
     impact: [
       {
-        value: "↑ 25%",
+        value: "25%",
+        icon: IoTrendingUp,
         label: "More clean energy used",
         desc: "Smart insights help households actually use the solar power they generate instead of wasting it.",
       },
       {
-        value: "↓ CO₂",
+        value: "CO₂",
+        icon: IoTrendingDown,
         label: "Less fossil fuel demand",
         desc: "Every optimized kilowatt replaces electricity from coal or gas plants polluting the air.",
       },
       {
-        value: "💡",
+        value: "Grid",
+        icon: IoBulbOutline,
         label: "Greener grids",
         desc: "Aggregated data helps neighborhoods see their collective renewable impact and inspires more adoption.",
       },
@@ -154,17 +183,20 @@ export const ideas: Idea[] = [
     ],
     impact: [
       {
-        value: "↓ CO₂",
+        value: "CO₂",
+        icon: IoTrendingDown,
         label: "Lower transport emissions",
         desc: "Choosing bike or transit over driving cuts a major share of personal carbon emissions.",
       },
       {
-        value: "🌬️",
+        value: "Clean",
+        icon: FiWind,
         label: "Cleaner city air",
         desc: "Fewer car trips mean less smog and healthier lungs for kids, elders, and wildlife.",
       },
       {
-        value: "🚲",
+        value: "Habits",
+        icon: IoBicycleOutline,
         label: "Healthier habits",
         desc: "Active commuting builds a greener lifestyle that benefits both people and the planet.",
       },
@@ -179,9 +211,9 @@ export const ideas: Idea[] = [
     category: "Water",
     desc: "Protect our most precious resource at home.",
     problem:
-      "Households quietly waste thousands of liters every year through leaks and habits water our rivers and ecosystems desperately need.",
+      "Households quietly waste thousands of liters every year through leaks and habits - water our rivers and ecosystems desperately need.",
     solution:
-      "A simple tracker that helps families notice leaks and adopt small saving habits a perfect beginner full-stack project.",
+      "A simple tracker that helps families notice leaks and adopt small saving habits - a perfect beginner full-stack project.",
     features: [
       "Leak alerts in real-time",
       "Per-fixture usage breakdown",
@@ -189,17 +221,20 @@ export const ideas: Idea[] = [
     ],
     impact: [
       {
-        value: "↓ 30%",
+        value: "30%",
+        icon: IoTrendingDown,
         label: "Less water wasted",
         desc: "Catching leaks early can save tens of thousands of liters per home, every year.",
       },
       {
-        value: "🐟",
+        value: "River",
+        icon: IoFishOutline,
         label: "Healthier rivers",
         desc: "Reduced household demand keeps more water flowing through streams that fish and frogs depend on.",
       },
       {
-        value: "💧",
+        value: "Resilient",
+        icon: IoWaterOutline,
         label: "Drought resilience",
         desc: "Mindful water use helps communities stay green even as climate change brings drier seasons.",
       },
@@ -216,7 +251,7 @@ export const ideas: Idea[] = [
     problem:
       "People want to give back to nature, but planting a tree often feels distant or untrustworthy.",
     solution:
-      "An app where personal milestones translate into verified tree planting on a live map a meaningful capstone or hackathon idea.",
+      "An app where personal milestones translate into verified tree planting on a live map - a meaningful capstone or hackathon idea.",
     features: [
       "Verified planting partners",
       "GPS-tracked forest map",
@@ -224,17 +259,20 @@ export const ideas: Idea[] = [
     ],
     impact: [
       {
-        value: "🌳",
+        value: "Live",
+        icon: FaTree,
         label: "Real trees planted",
         desc: "Every milestone becomes a verified tree in a real forest tracked, mapped, and growing.",
       },
       {
-        value: "↓ CO₂",
+        value: "CO₂",
+        icon: IoTrendingDown,
         label: "Carbon sequestered",
         desc: "Forests pull carbon out of the atmosphere for decades, helping cool the planet long-term.",
       },
       {
-        value: "🦉",
+        value: "Native",
+        icon: IoSparklesOutline,
         label: "Wildlife habitat",
         desc: "Reforested areas become homes for birds, insects, and animals losing ground to deforestation.",
       },
@@ -251,7 +289,7 @@ export const ideas: Idea[] = [
     problem:
       "Living waste-free feels overwhelming, so most people give up before they ever start helping the planet.",
     solution:
-      "A gentle coach app with bite-sized weekly challenges a perfect community-driven project for a student team.",
+      "A gentle coach app with bite-sized weekly challenges - a perfect community-driven project for a student team.",
     features: [
       "Personalized habit roadmap",
       "Community accountability",
@@ -259,17 +297,20 @@ export const ideas: Idea[] = [
     ],
     impact: [
       {
-        value: "↓ 50%",
+        value: "50%",
+        icon: IoTrendingDown,
         label: "Household waste cut",
         desc: "Small habit shifts compound — many users halve what they send to landfill within months.",
       },
       {
-        value: "🛍️",
+        value: "Plastic",
+        icon: IoBagHandleOutline,
         label: "Less single-use plastic",
         desc: "Fewer plastic bags, bottles, and wrappers escape into oceans and harm marine wildlife.",
       },
       {
-        value: "🌎",
+        value: "Lasting",
+        icon: IoGlobeOutline,
         label: "Lasting behavior change",
         desc: "Habits formed through gentle coaching stick for years, multiplying environmental impact.",
       },
@@ -284,9 +325,9 @@ export const ideas: Idea[] = [
     category: "Health",
     desc: "Help families and kids breathe a little safer.",
     problem:
-      "Air quality changes street by street, but most apps only show city-wide averages leaving vulnerable people in the dark.",
+      "Air quality changes street by street, but most apps only show city-wide averages - leaving vulnerable people in the dark.",
     solution:
-      "A community-powered air quality map that shares hyperlocal readings a powerful open-data project for CS students.",
+      "A community-powered air quality map that shares hyperlocal readings - a powerful open-data project for CS students.",
     features: [
       "Hyperlocal AQI map",
       "Health-based activity advice",
@@ -294,17 +335,20 @@ export const ideas: Idea[] = [
     ],
     impact: [
       {
-        value: "🫁",
+        value: "Health",
+        icon: IoShieldCheckmarkOutline,
         label: "Healthier lungs",
         desc: "Hyperlocal alerts protect kids, elders, and asthma sufferers from invisible pollution spikes.",
       },
       {
-        value: "📊",
+        value: "Data",
+        icon: IoStatsChartOutline,
         label: "Data for change",
         desc: "Open community data helps cities identify pollution hotspots and push for cleaner policies.",
       },
       {
-        value: "🌫️",
+        value: "Clear",
+        icon: FiWind,
         label: "Cleaner skies",
         desc: "Awareness drives demand for less driving, cleaner industry, and more trees in neighborhoods.",
       },
@@ -321,7 +365,7 @@ export const ideas: Idea[] = [
     problem:
       "Shoppers want to support ethical, eco-friendly brands but rarely have the time to research at checkout.",
     solution:
-      "A browser extension that scores products and suggests greener alternatives a fun web project to learn extensions and APIs.",
+      "A browser extension that scores products and suggests greener alternatives - a fun web project to learn extensions and APIs.",
     features: [
       "Ethical brand scoring",
       "Greener alternative finder",
@@ -329,17 +373,20 @@ export const ideas: Idea[] = [
     ],
     impact: [
       {
-        value: "🌿",
+        value: "Supply",
+        icon: IoLeafOutline,
         label: "Greener supply chains",
         desc: "Consumer demand pushes brands to adopt sustainable materials, fair labor, and cleaner shipping.",
       },
       {
-        value: "↓ CO₂",
+        value: "CO₂",
+        icon: IoTrendingDown,
         label: "Lower purchase footprint",
         desc: "Choosing low-carbon alternatives reduces the emissions hidden in everyday products.",
       },
       {
-        value: "🐢",
+        value: "Wild",
+        icon: IoShieldCheckmarkOutline,
         label: "Less harm to wildlife",
         desc: "Avoiding products tied to deforestation or pollution protects ecosystems and the animals in them.",
       },
