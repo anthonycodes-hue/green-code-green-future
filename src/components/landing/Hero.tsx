@@ -20,10 +20,9 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#060B08]">
       {/* Premium Loader Overlay */}
-      <div 
-        className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#060B08] transition-all duration-1000 ease-in-out pointer-events-none ${
-          isVideoReady ? "opacity-0 scale-105" : "opacity-100 scale-100"
-        }`}
+      <div
+        className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#060B08] transition-all duration-1000 ease-in-out pointer-events-none ${isVideoReady ? "opacity-0 scale-105" : "opacity-100 scale-100"
+          }`}
       >
         <div className="relative">
           <div className="absolute inset-0 bg-primary/20 blur-3xl animate-pulse rounded-full" />
@@ -48,9 +47,8 @@ const Hero = () => {
         preload="auto"
         poster={posterImage}
         onLoadedData={handleVideoLoad}
-        className={`absolute inset-0 h-full w-full object-cover scale-105 transition-opacity duration-1000 ${
-          isVideoReady ? "opacity-100" : "opacity-0"
-        }`}
+        className={`absolute inset-0 h-full w-full object-cover scale-105 transition-opacity duration-1000 ${isVideoReady ? "opacity-100" : "opacity-0"
+          }`}
       >
         <source src="/vids/vid1.mp4" type="video/mp4" />
         Your browser does not support the video tag.
@@ -60,12 +58,11 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-hero mix-blend-multiply opacity-80" />
 
       {/* Content */}
-      <div className={`relative z-10 container text-center text-white px-4 transition-all duration-1000 delay-300 ${
-        isVideoReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-      }`}>
+      <div className={`relative z-10 container text-center text-white px-4 transition-all duration-1000 delay-300 ${isVideoReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        }`}>
         <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 mb-8 shadow-glow-small">
           <Sparkles className="h-3.5 w-3.5 text-primary-glow animate-pulse" />
-          <span className="text-xs font-semibold tracking-wider uppercase">Apps for a Happy Earth · Open to Students</span>
+          <span className="text-xs font-semibold tracking-wider uppercase">Apps for a Happy Earth</span>
         </div>
 
         <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[4.5rem] font-extrabold leading-[0.95] text-balance drop-shadow-2xl">
