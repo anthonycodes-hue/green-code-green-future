@@ -2,9 +2,9 @@ import { Check } from "lucide-react";
 import aboutImage from "@/assets/about-eco.jpg";
 
 const points = [
-  "Energy-efficient code that lowers compute footprint",
-  "Open ecosystems that empower communities",
-  "Design that nudges users toward greener choices",
+  "Open ideas any student or developer can pick up and build",
+  "A friendly community of CS, IT, and self-taught makers",
+  "Every project aimed at helping nature and people thrive",
 ];
 
 const About = () => {
@@ -26,11 +26,11 @@ const About = () => {
         <div>
           <span className="text-sm font-semibold text-primary uppercase tracking-wider">Our Mission</span>
           <h2 className="mt-4 text-4xl md:text-5xl font-bold text-balance leading-tight">
-            We believe great software can grow the planet, not just the bottom line.
+            Apps built by students and developers, made to help nature breathe again.
           </h2>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            Every line of code carries a footprint. We help builders ship lean, efficient
-            products that respect both performance budgets and the environment.
+            We curate eco-friendly app ideas and invite the next generation of devs, CS &amp; IT
+            students, and curious tinkerers to bring them to life — together, one commit at a time.
           </p>
 
           <ul className="mt-8 space-y-4">

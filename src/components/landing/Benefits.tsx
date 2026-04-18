@@ -1,9 +1,9 @@
 import { Footprints, Lightbulb, Gauge } from "lucide-react";
 
 const benefits = [
-  { icon: Footprints, title: "Reduce Carbon Footprint", desc: "Ship leaner apps that consume less energy at every layer." },
-  { icon: Lightbulb, title: "Promote Eco Awareness", desc: "Educate users with thoughtful, beautiful experiences." },
-  { icon: Gauge, title: "Smart Resource Usage", desc: "Optimize compute, bandwidth, and storage by default." },
+  { icon: Footprints, title: "Help Nature Heal", desc: "Every app here tackles a real environmental problem — from waste to water to wildlife." },
+  { icon: Lightbulb, title: "Inspire Young Builders", desc: "Give CS & IT students a meaningful first project that goes beyond the classroom." },
+  { icon: Gauge, title: "Open & Contributable", desc: "Pick an idea, contribute features, or launch your own — every skill level is welcome." },
 ];
 
 const Benefits = () => {
@@ -11,9 +11,9 @@ const Benefits = () => {
     <section id="benefits" className="py-24 md:py-32 bg-gradient-soft">
       <div className="container">
         <div className="max-w-2xl mx-auto text-center mb-16">
-          <span className="text-sm font-semibold text-primary uppercase tracking-wider">Why it matters</span>
+          <span className="text-sm font-semibold text-primary uppercase tracking-wider">Why join us</span>
           <h2 className="mt-4 text-4xl md:text-5xl font-bold text-balance">
-            Build software that gives more than it takes.
+            Build apps that give back to the Earth — and to your future.
           </h2>
         </div>
 

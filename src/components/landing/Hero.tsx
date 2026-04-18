@@ -20,34 +20,34 @@ const Hero = () => {
       <div className="relative z-10 container text-center text-white px-4">
         <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 mb-8 animate-fade-in">
           <Sparkles className="h-3.5 w-3.5 text-primary-glow" />
-          <span className="text-xs font-medium tracking-wide">Sustainable Tech · 2025</span>
+          <span className="text-xs font-medium tracking-wide">Apps for a Happy Earth · Open to Students</span>
         </div>
 
         <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[1.05] text-balance animate-fade-in-slow">
-          Green Code,
+          Eco Apps,
           <br />
           <span className="bg-gradient-to-r from-primary-glow to-accent bg-clip-text text-transparent">
-            Green Future.
+            Happy Earth.
           </span>
         </h1>
 
         <p className="mt-6 text-lg md:text-xl font-medium text-white/90 max-w-2xl mx-auto animate-fade-in-slow [animation-delay:200ms]">
-          Building sustainable software solutions through innovation.
+          Real apps, real impact — helping nature, one project at a time.
         </p>
 
         <p className="mt-4 text-base text-white/70 max-w-xl mx-auto animate-fade-in-slow [animation-delay:400ms]">
-          Discover ten eco-friendly app ideas reshaping how technology serves our planet.
+          A home for developers, CS &amp; IT students, and curious makers to pick an idea, contribute, and build something the planet will thank you for.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-slow [animation-delay:600ms]">
           <Button size="lg" variant="hero" asChild>
             <a href="#ideas">
-              Explore Ideas
+              Pick an Idea
               <ArrowRight className="ml-1 h-4 w-4" />
             </a>
           </Button>
           <Button size="lg" variant="heroOutline" asChild>
-            <a href="#cta">Get Started</a>
+            <a href="#cta">Contribute</a>
           </Button>
         </div>
       </div>

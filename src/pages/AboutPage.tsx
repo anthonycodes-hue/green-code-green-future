@@ -5,16 +5,16 @@ import PageHero from "@/components/layout/PageHero";
 import aboutImage from "@/assets/about-eco.jpg";
 
 const values = [
-  { icon: Leaf, title: "Sustainability first", desc: "Every product decision weighed against its environmental cost." },
-  { icon: Heart, title: "Human-centered", desc: "Tools that nudge — never shame — toward greener habits." },
-  { icon: Globe2, title: "Open & accessible", desc: "We build for everyone, everywhere, on any device." },
+  { icon: Leaf, title: "Nature first", desc: "Every idea on this site exists to protect, restore, or honor the natural world." },
+  { icon: Heart, title: "Students welcome", desc: "Beginner-friendly briefs so CS, IT, and self-taught learners can confidently contribute." },
+  { icon: Globe2, title: "Open & collaborative", desc: "Anyone, anywhere can pick an idea, build it, share it, and inspire the next maker." },
 ];
 
 const points = [
-  "Energy-efficient code that lowers compute footprint",
-  "Open ecosystems that empower communities",
-  "Design that nudges users toward greener choices",
-  "Transparent metrics so impact is verifiable",
+  "A library of eco app ideas, ready for students to pick up",
+  "Friendly briefs so first-time contributors feel confident",
+  "Real environmental problems, real meaningful projects",
+  "A community where devs, designers, and learners help each other",
 ];
 
 const AboutPage = () => {
@@ -24,10 +24,10 @@ const AboutPage = () => {
         eyebrow="Our Story"
         title={
           <>
-            Software with a <span className="text-primary">conscience</span>.
+            Apps for nature, built by <span className="text-primary">tomorrow's developers</span>.
           </>
         }
-        description="We're a small team of engineers, designers, and naturalists who believe digital products can be a force for ecological good."
+        description="GreenCode is a home for students, devs, and IT learners to pick eco app ideas, contribute, and grow into builders the planet needs."
       />
 
       {/* Mission split */}
@@ -48,11 +48,11 @@ const AboutPage = () => {
           <div className="animate-fade-in" style={{ animationDelay: "120ms", animationFillMode: "backwards" }}>
             <span className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">Our Mission</span>
             <h2 className="mt-4 text-3xl md:text-5xl font-bold text-balance leading-tight">
-              We believe great software can grow the planet, not just the bottom line.
+              Inspire the next generation of devs to code for a happier Earth.
             </h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Every line of code carries a footprint. We help builders ship lean, efficient
-              products that respect both performance budgets and the environment.
+              We collect simple, meaningful eco app ideas and pair them with friendly briefs — so any
+              CS or IT student can pick one, contribute, and ship something that genuinely helps nature.
             </p>
 
             <ul className="mt-8 space-y-4">
@@ -74,7 +74,7 @@ const AboutPage = () => {
         <div className="container">
           <div className="max-w-2xl mx-auto text-center mb-14">
             <span className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">What we stand for</span>
-            <h2 className="mt-3 text-3xl md:text-4xl font-bold text-balance">Three values, one north star.</h2>
+            <h2 className="mt-3 text-3xl md:text-4xl font-bold text-balance">Three values, one happy planet.</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -95,7 +95,7 @@ const AboutPage = () => {
 
           <div className="mt-16 text-center">
             <Button asChild size="lg" className="rounded-full">
-              <Link to="/contact">Work with us</Link>
+              <Link to="/contact">Join the community</Link>
             </Button>
           </div>
         </div>

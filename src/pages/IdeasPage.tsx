@@ -26,20 +26,20 @@ const IdeasPage = () => {
   return (
     <>
       <PageHero
-        eyebrow="The Catalog"
+        eyebrow="Open Project Catalog"
         title={
           <>
-            Nine ideas to power a <span className="text-primary">greener</span> tomorrow.
+            Pick an idea. Help <span className="text-primary">nature</span>. Grow as a builder.
           </>
         }
-        description="Explore eco-conscious software concepts — each one tackles a real problem with a thoughtful, scalable solution."
+        description="A growing library of eco app ideas — open for students, devs, and IT learners to fork, contribute, or launch as their own."
       >
         <div className="max-w-md mx-auto relative">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search ideas…"
+            placeholder="Search ideas to contribute…"
             className="pl-11 h-12 rounded-full bg-card border-border/60 shadow-soft"
           />
         </div>
@@ -65,7 +65,7 @@ const IdeasPage = () => {
           </div>
 
           {filtered.length === 0 ? (
-            <p className="text-center text-muted-foreground py-16">No ideas match your search.</p>
+            <p className="text-center text-muted-foreground py-16">No ideas match your search — try a different keyword.</p>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {filtered.map((idea, i) => {
@@ -90,7 +90,7 @@ const IdeasPage = () => {
                       <h3 className="text-lg font-semibold mb-2">{idea.title}</h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">{idea.desc}</p>
                       <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-primary opacity-70 group-hover:opacity-100 group-hover:gap-2.5 transition-all duration-300">
-                        View details <ArrowRight className="h-4 w-4" />
+                        See the full project <ArrowRight className="h-4 w-4" />
                       </span>
                     </div>
                   </Link>
