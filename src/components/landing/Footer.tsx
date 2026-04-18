@@ -9,7 +9,7 @@ const Footer = () => {
           <span className="h-8 w-8 rounded-lg bg-gradient-brand flex items-center justify-center">
             <Leaf className="h-4 w-4 text-primary-foreground" />
           </span>
-          <span className="font-display font-bold">Green Code</span>
+          <span className="font-display font-bold">GreenCode</span>
         </Link>
 
         <ul className="flex items-center gap-8 text-sm text-muted-foreground">
@@ -19,7 +19,7 @@ const Footer = () => {
           <li><Link to="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
         </ul>
 
-        <p className="text-xs text-muted-foreground">© 2025 Green Code. Built for the planet.</p>
+        <p className="text-xs text-muted-foreground">© 2025 GreenCode. Made by students &amp; devs, for the Earth.</p>
       </div>
     </footer>
   );

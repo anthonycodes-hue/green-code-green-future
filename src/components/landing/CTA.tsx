@@ -12,13 +12,13 @@ const CTA = () => {
 
           <div className="relative z-10 max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-6xl font-bold text-primary-foreground text-balance">
-              Start Building Green Today.
+              Pick an Idea. Help the Planet.
             </h2>
             <p className="mt-5 text-lg md:text-xl text-primary-foreground/85 max-w-xl mx-auto">
-              Turn your idea into a sustainable product the planet will thank you for.
+              Whether you're a student looking for a meaningful project or a developer ready to give back — there's an idea here with your name on it.
             </p>
             <Button size="lg" variant="hero" className="mt-10 bg-white text-primary hover:bg-white/90 hover:shadow-2xl">
-              Launch Your Idea
+              Start Contributing
               <ArrowRight className="ml-1 h-4 w-4" />
             </Button>
           </div>

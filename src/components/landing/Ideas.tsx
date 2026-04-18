@@ -11,10 +11,10 @@ const Ideas = () => {
             <Leaf className="h-4 w-4" /> Ideas
           </span>
           <h2 className="mt-4 text-4xl md:text-5xl font-bold text-balance">
-            Software ideas that <span className="text-primary">heal the planet</span>.
+            Eco apps that <span className="text-primary">help nature</span>.
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Nine eco-conscious concepts designed to make sustainability effortless and beautiful.
+            Nine open project ideas waiting for students and developers to bring them to life — pick one, fork it, and start building for the planet.
           </p>
         </div>
 
@@ -51,7 +51,7 @@ const Ideas = () => {
             to="/ideas"
             className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all"
           >
-            See all ideas <ArrowRight className="h-4 w-4" />
+            Browse all ideas to contribute <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </div>
