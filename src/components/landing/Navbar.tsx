@@ -8,7 +8,6 @@ const links = [
   { to: "/ideas", label: "Ideas" },
   { to: "/about", label: "About" },
   { to: "/benefits", label: "Benefits" },
-  { to: "/contact", label: "Contact" },
 ];
 
 const Navbar = () => {
@@ -31,7 +30,7 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 animate-fade-in">
-      <div className="container mt-4">
+      <div className="container mt-2 md:mt-4">
         <nav
           className={cn(
             "rounded-2xl px-5 py-3 flex items-center justify-between shadow-soft transition-colors duration-300",
@@ -89,8 +88,9 @@ const Navbar = () => {
               onClick={() => setOpen((v) => !v)}
               aria-label="Toggle menu"
               className={cn(
-                "md:hidden h-9 w-9 rounded-lg flex items-center justify-center",
+                "md:hidden h-9 w-9 rounded-lg flex items-center justify-center transition-colors",
                 useLight ? "text-foreground" : "text-white",
+                open && (useLight ? "bg-accent" : "bg-white/10"),
               )}
             >
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -99,29 +99,36 @@ const Navbar = () => {
         </nav>
 
         {open && (
-          <div className="md:hidden glass-light mt-2 rounded-2xl p-4 shadow-soft animate-fade-in">
-            <ul className="flex flex-col gap-1">
-              {links.map((l) => (
-                <li key={l.to}>
-                  <NavLink
-                    to={l.to}
-                    className={({ isActive }) =>
-                      cn(
-                        "block px-3 py-2 rounded-lg text-sm font-medium transition-colors",
-                        isActive ? "bg-accent text-primary" : "text-foreground hover:bg-accent/60",
-                      )
-                    }
-                  >
-                    {l.label}
-                  </NavLink>
+          <div className="md:hidden overflow-hidden mt-2 rounded-2xl shadow-xl animate-in fade-in slide-in-from-top-4 duration-300">
+            <div className={cn(
+              "p-4 flex flex-col gap-1",
+              useLight ? "glass-light" : "bg-white/95 backdrop-blur-xl border border-white/20"
+            )}>
+              <ul className="flex flex-col gap-1">
+                {links.map((l) => (
+                  <li key={l.to}>
+                    <NavLink
+                      to={l.to}
+                      className={({ isActive }) =>
+                        cn(
+                          "block px-4 py-3 rounded-xl text-base font-medium transition-colors",
+                          isActive
+                            ? "bg-primary/10 text-primary"
+                            : "text-foreground hover:bg-accent/60",
+                        )
+                      }
+                    >
+                      {l.label}
+                    </NavLink>
+                  </li>
+                ))}
+                <li className="pt-3">
+                  <Button asChild className="w-full h-12 rounded-xl text-base font-semibold shadow-glow">
+                    <Link to="/contact">Join the Community</Link>
+                  </Button>
                 </li>
-              ))}
-              <li className="pt-2">
-                <Button asChild className="w-full rounded-full">
-                  <Link to="/contact">Join Us</Link>
-                </Button>
-              </li>
-            </ul>
+              </ul>
+            </div>
           </div>
         )}
       </div>

@@ -72,6 +72,9 @@ export default {
         soft: 'var(--shadow-soft)',
         card: 'var(--shadow-card)',
         glow: 'var(--shadow-glow)',
+        glass: 'var(--shadow-glass)',
+        'glow-intense': '0 0 40px -10px hsl(142 71% 36% / 0.5)',
+        'glow-small': '0 10px 30px -10px hsl(142 71% 36% / 0.2)',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -101,7 +104,7 @@ export default {
         },
         "float": {
           "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-8px)" },
+          "50%": { transform: "translateY(-20px)" },
         },
       },
       animation: {
@@ -111,6 +114,7 @@ export default {
         "fade-in-slow": "fade-in-slow 1s cubic-bezier(0.16, 1, 0.3, 1) both",
         "scale-in": "scale-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) both",
         "float": "float 6s ease-in-out infinite",
+        "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
     },
   },

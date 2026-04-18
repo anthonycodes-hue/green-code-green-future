@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Mail, Send, Sparkles, CheckCircle2 } from "lucide-react";
+import { Mail, Send, Sparkles, CheckCircle2, Leaf } from "lucide-react";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
+import { cn } from "@/lib/utils";
 
 const emailSchema = z
   .string()
@@ -30,104 +31,105 @@ const Newsletter = () => {
     }
 
     setLoading(true);
-    // Local-only subscription stub — replace with backend later
-    await new Promise((r) => setTimeout(r, 600));
+    await new Promise((r) => setTimeout(r, 800));
     setLoading(false);
     setSubscribed(true);
     setEmail("");
     toast({
       title: "You're on the list 🌱",
-      description: "We'll send you fresh eco app ideas — no spam, ever.",
+      description: "We'll send you fresh eco app ideas soon.",
     });
   };
 
   return (
-    <section id="newsletter" className="py-20 md:py-28">
-      <div className="container">
-        <div className="relative overflow-hidden rounded-3xl border border-border/60 bg-card shadow-card">
-          {/* Decorative gradient blobs */}
-          <div className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-gradient-brand opacity-20 blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-accent/40 blur-3xl" />
+    <section id="newsletter" className="py-24 md:py-36 bg-background relative overflow-hidden">
+      {/* Decorative Background */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary/10 rounded-full blur-[140px]" />
+      </div>
 
-          <div className="relative grid lg:grid-cols-2 gap-10 p-8 md:p-14 items-center">
-            {/* Left: Copy */}
-            <div className="animate-fade-in">
-              <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-semibold text-primary uppercase tracking-wider">
-                <Sparkles className="h-3.5 w-3.5" />
-                Stay in the loop
-              </div>
-              <h2 className="mt-5 font-display text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-balance">
-                New eco app ideas,
-                <br />
-                <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-                  straight to your inbox.
-                </span>
-              </h2>
-              <p className="mt-4 text-muted-foreground md:text-lg leading-relaxed max-w-md">
-                Subscribe to get fresh project briefs, contributor spotlights, and ways to help nature — once a month, no fluff.
-              </p>
+      <div className="">
+        <div className="">
+          <div className="relative overflow-hidden bg-green-950 border border-white/10 shadow-glow p-8 md:p-16 lg:p-20">
+            {/* Animated Glow blobs */}
+            <div className="absolute top-0 right-0 w-96 h-96 bg-primary-glow/20 rounded-full blur-[100px] animate-pulse-slow" />
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/20 rounded-full blur-[100px] animate-pulse-slow [animation-delay:2s]" />
 
-              <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
-                {["Monthly drop of new ideas", "Beginner-friendly project picks", "Unsubscribe anytime"].map((t) => (
-                  <li key={t} className="flex items-center gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-primary" />
-                    {t}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <div className="container relative grid lg:grid-cols-2 gap-12 items-center">
+              <div className="animate-fade-in">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-primary-glow text-xs font-bold uppercase tracking-[0.2em] mb-6">
+                  <Sparkles className="h-3.5 w-3.5" /> Stay Inspired
+                </div>
+                <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight">
+                  Fresh eco-app <br />
+                  <span className="text-primary-glow italic">briefs monthly.</span>
+                </h2>
+                <p className="mt-8 text-white/70 text-lg md:text-xl leading-relaxed max-w-lg">
+                  Join a community of 500+ builders receiving curated project ideas, open-source kits, and planet-saving opportunities.
+                </p>
 
-            {/* Right: Form */}
-            <div className="animate-fade-in [animation-delay:120ms]">
-              <form
-                onSubmit={handleSubmit}
-                className="rounded-2xl border border-border/60 bg-background/60 backdrop-blur p-6 md:p-8 shadow-soft"
-              >
-                <label htmlFor="newsletter-email" className="text-sm font-medium">
-                  Email address
-                </label>
-                <div className="mt-3 flex flex-col sm:flex-row gap-3">
-                  <div className="relative flex-1">
-                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                    <Input
-                      id="newsletter-email"
-                      type="email"
-                      placeholder="you@planet.earth"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      maxLength={255}
-                      className="pl-9 h-12 rounded-xl"
-                      aria-label="Email address"
-                      required
-                    />
+                <div className="mt-10 flex items-center gap-6">
+                  <div className="flex -space-x-3">
+                    {[1, 2, 3, 4].map((i) => (
+                      <div key={i} className="h-10 w-10 rounded-full border-2 border-green-900 bg-green-800 flex items-center justify-center text-[10px] font-bold text-white overflow-hidden">
+                        <img src={`https://i.pravatar.cc/150?u=${i}`} alt="user" />
+                      </div>
+                    ))}
+                    <div className="h-10 w-10 rounded-full border-2 border-green-900 bg-primary flex items-center justify-center text-[10px] font-bold text-white">
+                      +12
+                    </div>
                   </div>
+                  <span className="text-sm text-white/50 font-medium">Joined by developers worldwide</span>
+                </div>
+              </div>
+
+              <div className="animate-fade-in [animation-delay:200ms]">
+                <form
+                  onSubmit={handleSubmit}
+                  className="glass p-8 md:p-10 rounded-[2rem] border-white/10 shadow-2xl space-y-4"
+                >
+                  <div className="space-y-2">
+                    <label htmlFor="newsletter-email" className="text-sm font-bold text-white/80 ml-1 uppercase tracking-wider">Work Email</label>
+                    <div className="relative">
+                      <Mail className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-white/30" />
+                      <Input
+                        id="newsletter-email"
+                        type="email"
+                        placeholder="coder@earth.org"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="bg-white/5 border-white/10 text-white placeholder:text-white/20 h-14 pl-12 rounded-xl focus:ring-primary-glow focus:border-primary-glow"
+                        required
+                      />
+                    </div>
+                  </div>
+
                   <Button
                     type="submit"
                     size="lg"
-                    disabled={loading}
-                    className="h-12 rounded-xl px-6 group"
+                    disabled={loading || subscribed}
+                    className={cn(
+                      "w-full h-14 rounded-xl text-lg font-bold transition-all duration-300 shadow-glow",
+                      subscribed ? "bg-green-600 hover:bg-green-600" : "bg-primary-glow hover:bg-white hover:text-primary-glow"
+                    )}
                   >
                     {loading ? (
-                      "Subscribing…"
+                      "Saving your spot..."
+                    ) : subscribed ? (
+                      <span className="flex items-center gap-2">
+                        <CheckCircle2 className="h-5 w-5" /> Subscribed
+                      </span>
                     ) : (
-                      <>
-                        Subscribe
-                        <Send className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-0.5" />
-                      </>
+                      <span className="flex items-center gap-2">
+                        Get the briefs <Send className="h-4 w-4" />
+                      </span>
                     )}
                   </Button>
-                </div>
-                <p className="mt-3 text-xs text-muted-foreground">
-                  By subscribing you agree to receive occasional emails from GreenCode. We respect your inbox.
-                </p>
-
-                {subscribed && (
-                  <div className="mt-5 flex items-center gap-2 rounded-xl border border-primary/30 bg-primary/5 px-4 py-3 text-sm text-primary animate-fade-in">
-                    <CheckCircle2 className="h-4 w-4" />
-                    You're subscribed — welcome to the community!
-                  </div>
-                )}
-              </form>
+                  <p className="text-center text-xs text-white/30 pt-2 font-medium">
+                    No spam. Unsubscribe anytime with one click.
+                  </p>
+                </form>
+              </div>
             </div>
           </div>
         </div>

@@ -32,11 +32,11 @@ const ContactPage = () => {
             Want to <span className="text-primary">contribute</span>? Let's talk.
           </>
         }
-        description="Pitch an idea, ask to join a project, or just share what you're learning. Students, devs, and the eco-curious — you're all welcome here."
+        description="Pitch an idea, ask to join a project, or just share what you're learning. Students, devs, and the eco-curious you're all welcome here."
       />
 
       <section className="pb-24 md:pb-32">
-        <div className="container grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
+        <div className="container grid lg:grid-cols-5 gap-8 lg:gap-12 items-start mt-10">
           {/* Left: contact info + image */}
           <aside className="lg:col-span-2 space-y-6 animate-fade-in">
             <div className="relative rounded-3xl overflow-hidden shadow-card">
@@ -74,7 +74,7 @@ const ContactPage = () => {
                 </span>
                 <div>
                   <div className="text-xs uppercase tracking-wider text-muted-foreground">Where</div>
-                  <p className="font-medium">Open & remote — anywhere on Earth 🌍</p>
+                  <p className="font-medium">Open & remote anywhere on Earth 🌍</p>
                 </div>
               </div>
               <div className="flex items-start gap-4 rounded-2xl bg-card p-5 border border-border/60 shadow-soft">
@@ -101,7 +101,7 @@ const ContactPage = () => {
                 </div>
                 <h2 className="text-2xl font-bold">Thanks for reaching out!</h2>
                 <p className="mt-3 text-muted-foreground max-w-sm mx-auto">
-                  Your message is in our inbox. We'll be in touch soon — usually within 48 hours.
+                  Your message is in our inbox. We'll be in touch soon usually within 48 hours.
                 </p>
                 <Button variant="outline" className="mt-8 rounded-full" onClick={() => setSubmitted(false)}>
                   Send another message

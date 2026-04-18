@@ -9,37 +9,48 @@ const points = [
 
 const About = () => {
   return (
-    <section id="about" className="py-24 md:py-32 bg-background">
-      <div className="container grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        <div className="relative">
-          <div className="absolute -inset-4 bg-gradient-brand rounded-[2rem] opacity-20 blur-2xl" />
-          <img
-            src={aboutImage}
-            alt="Hands holding a small green seedling sprouting from soil"
-            width={1280}
-            height={1280}
-            loading="lazy"
-            className="relative rounded-3xl shadow-card w-full h-auto object-cover aspect-square"
-          />
+    <section id="about" className="py-24 md:py-40 bg-background relative overflow-hidden">
+      <div className="container grid lg:grid-cols-2 gap-16 lg:gap-24 items-center relative z-10">
+        <div className="relative group">
+          <div className="absolute -inset-6 bg-gradient-brand rounded-[3rem] opacity-20 blur-3xl group-hover:opacity-30 transition-opacity duration-700" />
+          <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl">
+            <img
+              src={aboutImage}
+              alt="Hands holding a small green seedling sprouting from soil"
+              width={1280}
+              height={1280}
+              loading="lazy"
+              className="w-full h-auto object-cover aspect-square hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+          {/* Floating stat badge */}
+          <div className="absolute -bottom-6 -right-6 glass p-6 rounded-3xl animate-float shadow-glow">
+            <div className="text-3xl font-bold text-primary">100%</div>
+            <div className="text-[10px] uppercase tracking-wider font-bold text-muted-foreground">Eco Focus</div>
+          </div>
         </div>
 
-        <div>
-          <span className="text-sm font-semibold text-primary uppercase tracking-wider">Our Mission</span>
-          <h2 className="mt-4 text-4xl md:text-5xl font-bold text-balance leading-tight">
-            Apps built by students and developers, made to help nature breathe again.
+        <div className="animate-fade-in">
+          <span className="text-xs font-bold text-primary uppercase tracking-[0.3em] mb-6 inline-block">Our Collective Mission</span>
+          <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight text-balance leading-[1.1]">
+            Code that breathes <br />
+            <span className="bg-gradient-brand bg-clip-text text-transparent">life into nature.</span>
           </h2>
-          <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            We curate eco-friendly app ideas and invite the next generation of devs, CS &amp; IT
-            students, and curious tinkerers to bring them to life — together, one commit at a time.
+          <p className="mt-8 text-xl text-muted-foreground leading-relaxed">
+            We curate meaningful project briefs so the next generation of developers can skip the "hello world" and jump straight into solving real environmental crises.
           </p>
 
-          <ul className="mt-8 space-y-4">
-            {points.map((p) => (
-              <li key={p} className="flex items-start gap-3">
-                <span className="mt-0.5 h-6 w-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
-                  <Check className="h-3.5 w-3.5 text-primary" strokeWidth={3} />
+          <ul className="mt-12 space-y-6">
+            {points.map((p, i) => (
+              <li
+                key={p}
+                className="flex items-start gap-4 animate-fade-in"
+                style={{ animationDelay: `${i * 100 + 400}ms`, animationFillMode: "backwards" }}
+              >
+                <span className="mt-1 h-7 w-7 rounded-xl bg-accent flex items-center justify-center flex-shrink-0 shadow-soft">
+                  <Check className="h-4 w-4 text-primary" strokeWidth={3} />
                 </span>
-                <span className="text-foreground">{p}</span>
+                <span className="text-lg font-medium text-foreground/90">{p}</span>
               </li>
             ))}
           </ul>

@@ -14,12 +14,12 @@ const Ideas = () => {
             Eco apps that <span className="text-primary">help nature</span>.
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Nine open project ideas waiting for students and developers to bring them to life — pick one, fork it, and start building for the planet.
+            Open project ideas waiting for students and developers to bring them to life pick one, fork it, and start building for the planet.
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {ideas.map((idea, i) => {
+          {ideas.slice(0, 6).map((idea, i) => {
             const Icon = idea.icon;
             return (
               <Link

@@ -51,7 +51,7 @@ const AboutPage = () => {
               Inspire the next generation of devs to code for a happier Earth.
             </h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              We collect simple, meaningful eco app ideas and pair them with friendly briefs — so any
+              We collect simple, meaningful eco app ideas and pair them with friendly briefs so any
               CS or IT student can pick one, contribute, and ship something that genuinely helps nature.
             </p>
 

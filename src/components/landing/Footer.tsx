@@ -39,7 +39,7 @@ const Footer = () => {
               <span className="font-display font-bold text-xl">GreenCode</span>
             </Link>
             <p className="mt-5 text-muted-foreground leading-relaxed max-w-md">
-              A home for developers, CS &amp; IT students, and curious makers to pick eco app ideas, contribute, and build a happier Earth — one project at a time.
+              A home for developers, CS &amp; IT students, and curious makers to pick eco app ideas, contribute, and build a happier Earth one project at a time.
             </p>
 
             {/* Socials */}
