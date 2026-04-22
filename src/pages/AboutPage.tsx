@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import PageHero from "@/components/layout/PageHero";
 import aboutImage from "@/assets/about-eco.jpg";
+import OurTeam from "./OurTeam";
 
 const values = [
   { icon: Leaf, title: "Nature first", desc: "Every idea on this site exists to protect, restore, or honor the natural world." },
@@ -69,6 +70,8 @@ const AboutPage = () => {
         </div>
       </section>
 
+      <OurTeam />
+
       {/* Values */}
       <section className="py-20 md:py-28 bg-gradient-soft">
         <div className="container">
@@ -100,6 +103,8 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
+
+
     </>
   );
 };
