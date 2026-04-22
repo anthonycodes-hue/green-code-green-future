@@ -63,8 +63,8 @@ const ContactPage = () => {
                 </span>
                 <div>
                   <div className="text-xs uppercase tracking-wider text-muted-foreground">Email</div>
-                  <a href="mailto:hello@greencode.eco" className="font-medium hover:text-primary transition-colors">
-                    hello@greencode.eco
+                  <a href="mailto:hello.microflux@gmail.com" className="font-medium hover:text-primary transition-colors">
+                    hello.microflux@gmail.com
                   </a>
                 </div>
               </div>
@@ -112,11 +112,11 @@ const ContactPage = () => {
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div className="space-y-2">
                     <Label htmlFor="name">Name</Label>
-                    <Input id="name" name="name" required placeholder="Jane Appleseed" className="h-11" />
+                    <Input id="name" name="name" required placeholder="Cawasa Gwapo" className="h-11" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">Email</Label>
-                    <Input id="email" name="email" type="email" required placeholder="jane@company.com" className="h-11" />
+                    <Input id="email" name="email" type="email" required placeholder="cawasa@example.com" className="h-11" />
                   </div>
                 </div>
                 <div className="space-y-2">
