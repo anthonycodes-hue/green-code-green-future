@@ -1,4 +1,4 @@
-import { Leaf, Github, Twitter, Linkedin, Mail, Heart, ArrowUpRight } from "lucide-react";
+import { Leaf, Github, Twitter, Linkedin, Mail, Heart, ArrowUpRight, Code2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const navLinks = [
@@ -101,10 +101,10 @@ const Footer = () => {
         {/* Divider + bottom bar */}
         <div className="mt-14 pt-6 border-t border-border/60 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} GreenCode. All rights reserved.
+            © {new Date().getFullYear()} MicroFlux ft GreenCode. All rights reserved.
           </p>
           <p className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
-            Made with by MicroFlux Team.
+            <Code2 className="h-3.5 w-3.5 text-primary fill-primary" /> Made by MicroFlux Team.
           </p>
         </div>
       </div>
