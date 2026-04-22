@@ -104,7 +104,7 @@ const Footer = () => {
             © {new Date().getFullYear()} GreenCode. All rights reserved.
           </p>
           <p className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
-            Made with <Heart className="h-3.5 w-3.5 text-primary fill-primary" /> by students &amp; devs, for the Earth.
+            Made with by MicroFlux Team.
           </p>
         </div>
       </div>
