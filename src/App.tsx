@@ -5,6 +5,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import SiteLayout from "./components/layout/SiteLayout";
+import { Leaf } from "lucide-react";
 
 // Lazy imports
 const Index = lazy(() => import("./pages/Index"));
@@ -25,7 +26,25 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={
+
+          <div
+            className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#060B08] transition-all duration-1000 ease-in-out pointer-events-none`}
+          >
+            <div className="relative">
+              <div className="absolute inset-0 bg-primary/20 blur-3xl animate-pulse rounded-full" />
+              <Leaf className="h-16 w-16 text-primary-glow animate-bounce relative z-10" />
+            </div>
+            <div className="mt-8 flex flex-col items-center gap-2">
+              <span className="text-primary-glow font-display font-bold tracking-[0.2em] uppercase text-xs animate-pulse">
+                Gathering Nature's Pixels
+              </span>
+              <div className="h-0.5 w-24 bg-white/10 rounded-full overflow-hidden">
+                <div className="h-full bg-primary-glow animate-[shimmer_2s_infinite] w-full" />
+              </div>
+            </div>
+          </div>
+        }>
           <Routes>
             <Route element={<SiteLayout />}>
               <Route path="/" element={<Index />} />
